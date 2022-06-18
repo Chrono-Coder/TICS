@@ -71,6 +71,8 @@ function play() {
     cellElements.forEach(cell => {
       cell.classList.remove(X_CLASS)
       cell.classList.remove(O_CLASS)
+      boardElement.classList.add(X_CLASS)
+      boardElement.classList.remove(O_CLASS)
       cell.removeEventListener('click', handleClick)
       cell.addEventListener('click', handleClick, { once: true })
     })
