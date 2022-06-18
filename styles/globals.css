@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .board.x .cell:not(.x):not(.o):hover::before,
+  .board.x .cell:not(.x):not(.o):hover::after,
+  .board.o .cell:not(.x):not(.o):hover::before{
+    background-color: #ec7a7a;
+  }
+
+  .cell.x::before,
+  .cell.x::after{
+    background-color: #C42021;
+  }
+  .cell.o::before{
+    background-color: #C42021;
+  }
+
+  .cell{
+    cursor :pointer
+  }
+
+  .cell.x,
+  .cell.o{
+    cursor: not-allowed;
+  }
+
+  .cell.x::before,
+  .cell.x::after,
+  .board.x .cell:not(.x):not(.o):hover::before,
+  .board.x .cell:not(.x):not(.o):hover::after{
+    position: absolute;
+    content : "";
+    width: 15px;
+    height : 90px;
+    /* border-radius: 100%; */
+    
+  }
+  
+  .cell.x::before,
+  .board.x .cell:not(.x):not(.o):hover::before{
+    transform: rotate(45deg);
+  }
+
+  .cell.x::after,
+  .board.x .cell:not(.x):not(.o):hover::after{
+    transform: rotate(-45deg);
+  } 
+
+  .cell.o::before,
+  .board.o .cell:not(.x):not(.o):hover::before{
+    position: absolute;
+    content : "";
+    width: 90px;
+    height : 90px;    
+    border-radius: 50%;
+  }
+  .cell.o::after,
+  .board.o .cell:not(.x):not(.o):hover::after {
+    position: absolute;
+    content : "";
+    width: 70px;
+    height : 70px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .cell.o::before{
+    transform: rotate(45deg);
+  }
+
+  .cell.o::after{
+    transform: rotate(-45deg);
+  }
+  .show{    
+    display:flex;
+    
+  }
+}
