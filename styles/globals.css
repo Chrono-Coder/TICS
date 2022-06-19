@@ -5,17 +5,19 @@
 @layer components {
 
   .board.x .cell:not(.x):not(.o):hover::before,
-  .board.x .cell:not(.x):not(.o):hover::after,
+  .board.x .cell:not(.x):not(.o):hover::after{
+    background-color: #88b2d6;
+  }
   .board.o .cell:not(.x):not(.o):hover::before{
     background-color: #ec7a7a;
   }
 
   .cell.x::before,
   .cell.x::after{
-    background-color: #C42021;
+    background-color: #416788;
   }
   .cell.o::before{
-    background-color: #C42021;
+    background-color: #D7263D;
   }
 
   .cell{
@@ -63,7 +65,7 @@
     content : "";
     width: 70px;
     height : 70px;
-    background-color: white;
+    background-color: #F6F7EB;
     border-radius: 50%;
   }
   .cell.o::before{

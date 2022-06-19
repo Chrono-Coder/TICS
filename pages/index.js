@@ -7,30 +7,30 @@ import { useState } from 'react'
 export default function Home() {
   
   return (
-    <div>
+    <div className='bg-[#F6F7EB]'>
       <Head>
         <title>Tic Tac Toe</title>
         <meta name="description" content="X and O game" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       {/* <h1 className="flex justify-center content-center items-center text-4xl align-middle text-red-600" id="turn">X</h1> */}
-      <div className="border-black fixed m-0 p-0 ml-4 items-center justify-evenly w-[130px]">
-        <div className="flex text-black font-bold text-3xl p-4 pb-4 border-black border-b-2" id="xScore">X: 0</div>
-        <div className="flex text-black font-bold text-3xl p-4 border-black" id="oScore">O: 0</div>
+      <div className="border-[#000807] fixed m-0 p-0 ml-4 items-center justify-evenly w-[130px]">
+        <div className="flex text-[#000807] font-bold text-3xl p-4 pb-4 border-[#000807] border-b-2" id="xScore">X: 0</div>
+        <div className="flex text-[#000807]  font-bold text-3xl p-4 border-[#000807]" id="oScore">O: 0</div>
       </div>
       <div className="board x grid w-[100vw] h-[100vh] justify-center content-center items-center grid-cols-tic-tac m-0 p-0" id="board">
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black border-t-0 border-l-0" data-cell></div>
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black border-t-0" data-cell></div>
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black border-t-0 border-r-0" data-cell></div>
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black border-l-0" data-cell></div>
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black" data-cell></div>
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black border-r-0" data-cell></div>
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black border-l-0 border-b-0" data-cell></div>
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black border-b-0" data-cell></div>
-        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-black border-r-0 border-b-0" data-cell></div>
-        <div className="fixed w-[100vw] h-[100vh] justify-center content-center items-center bg-black bg-opacity-95 flex-col hidden" id="endDisplay">
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807] border-t-0 border-l-0" data-cell></div>
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807] border-t-0" data-cell></div>
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807] border-t-0 border-r-0" data-cell></div>
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807] border-l-0" data-cell></div>
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807]" data-cell></div>
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807] border-r-0" data-cell></div>
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807] border-l-0 border-b-0" data-cell></div>
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807] border-b-0" data-cell></div>
+        <div className="cell flex justify-center items-center relative w-[100px] h-[100px] border border-[#000807] border-r-0 border-b-0" data-cell></div>
+        <div className="fixed w-[100vw] h-[100vh] justify-center content-center items-center bg-[#000807]  bg-opacity-95 flex-col hidden" id="endDisplay">
           <h1 className=" text-white text-5xl pb-2" id="winningMsg"></h1>
-          <button className="font-bold bg-white text-black hover:bg-black hover:text-white p-1 text-2xl hover:border-white" id="restartBtn">Restart</button>
+          <button className="font-bold bg-white text-black hover:bg-black hover:text-white p-1 text-2xl hover:border-white hover:border" id="restartBtn">Restart</button>
         </div>
         {typeof window !== 'undefined' ? play() : null}
       </div>
